@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Online CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+    img {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+      border-radius: 50%; /* Makes profile picture circular */
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    ul ul {
+      list-style-type: circle;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <section>
+      <h1>Kurt John L. Baterbonia</h1>
+      <p>IT Student | Web Systems and Technologies</p>
+    </section>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- About Me Section -->
+    <section>
+      <h2>About Me</h2>
+      <img src="images/profile.jpg" alt="Profile photo">
+      <p>Hello! I am an IT student passionate anything about IT related skills. I enjoy learning new programming languages and building projects that help solve real-world problems.</p>
+      <p>Email:
+        <a href="mailto:rolvekraken26@gmail.com">rolvekraken26@gmail.com</a><br>
+        GitHub:
+        <a href="https://github.com/codeswagger24" target="_blank">github.com/codeswagger24</a>
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <ul>
+        <li>Web Development
+          <ul>
+            <li>Frontend
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+            <li>Backend</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h2>Education</h2>
+      <table border="1">
+        <tr>
+          <th>Program</th>
+          <th>Institution</th>
+          <th>Year Graduated</th>
+        </tr>
+        <tr>
+          <td>Senior High-School</td>
+          <td>PHINMA COC</td>
+          <td>2024</td>
+        </tr>
+        <tr>
+          <td>College</td>
+          <td>USTP – CDO Campus</td>
+          <td>2028</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section>
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <textarea placeholder="Message" rows="5" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2026 Kurt John L. Baterbonia. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
