@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="css/style.css"
   <meta charset="UTF-8">
   <title>Personal Online CV</title>
   <style>
@@ -17,11 +18,13 @@
       margin-bottom: 5px;
     }
     img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin-bottom: 10px;
-      border-radius: 50%; /* Makes profile picture circular */
+    max-width: 150px;
+    height: auto;       
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 0;    
+}
+}
     }
     table {
       border-collapse: collapse;
@@ -58,7 +61,7 @@
 
   <!-- Header Section -->
   <header>
-    <section>
+    <section class="card">
       <h1>Kurt John L. Baterbonia</h1>
       <p>IT Student | Web Systems and Technologies</p>
     </section>
@@ -66,9 +69,9 @@
 
   <!-- Main Content -->
   <main>
-
+    <div class="container">
     <!-- About Me Section -->
-    <section>
+    <section class="card">
       <h2>About Me</h2>
       <img src="images/profile.jpg" alt="Profile photo">
       <p>Hello! I am an IT student passionate anything about IT related skills. I enjoy learning new programming languages and building projects that help solve real-world problems.</p>
@@ -80,7 +83,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section>
+    <section class="card">
       <h2>Skills</h2>
       <ul>
         <li>HTML</li>
@@ -104,7 +107,7 @@
     </section>
 
     <!-- Education Section -->
-    <section>
+    <section class="card">
       <h2>Education</h2>
       <table border="1">
         <tr>
@@ -137,7 +140,7 @@
     
 
     <!-- Contact Form Section -->
-    <section>
+    <section class="card">
       <h2>Contact Me</h2>
       <form>
         <input type="text" placeholder="Name" required><br><br>
@@ -146,7 +149,7 @@
         <button type="submit">Send</button>
       </form>
     </section>
-
+     </div>
   </main>
 
   <!-- Footer Section -->
