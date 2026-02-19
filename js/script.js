@@ -3,12 +3,17 @@ console.log("js/script.js")
 const submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click",function(event){
 event.preventDefault();
-alert("Thank you! Your message has been received.");
 });
 
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click",function(){
 document.body.classList.toggle("dark-mode");
+
+if (document.body.classList.contains("dark-mode")){
+themeToggle.textContent = "Toggle Light Mode";
+} else {
+themeToggle.textContent = "Toggle Dark Mode";
+}
 });
 
 
@@ -28,5 +33,6 @@ if (name===""||email===""){
 alert("Please fill in all required fields.");
 } else{
 alert("Form submitted successfully!");
+alert("Thank you! Your message has been received.");
 }
 });
