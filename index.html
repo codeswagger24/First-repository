@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/style.css"
+  <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <title>Personal Online CV</title>
   <style>
@@ -24,8 +24,7 @@
     margin-bottom: 10px;
     border-radius: 0;    
 }
-}
-    }
+
     table {
       border-collapse: collapse;
       width: 100%;
@@ -62,10 +61,13 @@
   <!-- Header Section -->
   <header>
     <section class="card">
-      <h1>Kurt John L. Baterbonia</h1>
+      <div class ="container">
+        <h1>Kurt John L. Baterbonia</h1>
       <p>IT Student | Web Systems and Technologies</p>
+      <button id="themeToggle">Toggle Dark Mode</button>
     </section>
   </header>
+</div>
 
   <!-- Main Content -->
   <main>
@@ -84,26 +86,29 @@
 
     <!-- Skills Section -->
     <section class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <ul>
-        <li>Web Development
-          <ul>
-            <li>Frontend
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </li>
-            <li>Backend</li>
-          </ul>
-        </li>
-      </ul>
+      <button id="toggleSkills">Show/Hide Skills</button>
+      <section class="card" id="skillsSection">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <ul>
+          <li>Web Development
+            <ul>
+              <li>Frontend
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </li>
+              <li>Backend</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </section>
 
     <!-- Education Section -->
@@ -143,10 +148,10 @@
     <section class="card">
       <h2>Contact Me</h2>
       <form>
-        <input type="text" placeholder="Name" required><br><br>
-        <input type="email" placeholder="Email" required><br><br>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
         <textarea placeholder="Message" rows="5" required></textarea><br><br>
-        <button type="submit">Send</button>
+        <button type="submit" id="submitBtn">Send</button>  
       </form>
     </section>
      </div>
@@ -157,5 +162,8 @@
     <p>&copy; 2026 Kurt John L. Baterbonia. All rights reserved.</p>
   </footer>
 
-</body>
-</html>
+  </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+  </html>
