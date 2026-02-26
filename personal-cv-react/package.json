@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://codeswagger24.github.io/personal-cv-react",
+  "homepage": "https://codeswagger24.github.io/First-repository/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
