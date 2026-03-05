@@ -4,7 +4,7 @@ function About() {
   return (  
     <Card title="About Me">
       <img src={profileImg} alt="Profile photo" />
-      <p>Hello! I am an IT student passionate anything about IT related skills. I enjoy learning new programming languages and building projects that help solve real-world problems.</p>
+      <p>Hello! I am an IT student passionate anything about IT related skills. I enjoy learning programming languages and building projects that help solve real-world problems.</p>
       <p>Email:
         <a href="mailto:rolvekraken26@gmail.com">rolvekraken26@gmail.com</a><br />
         GitHub:
