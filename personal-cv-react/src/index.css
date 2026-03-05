@@ -1,10 +1,11 @@
-
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,13 +14,13 @@ body {
   padding: 20px;
 }
 
+/* Container */
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-
-
+/* Cards */
 .card {
   background: #ffffff;
   padding: 20px;
@@ -29,11 +30,28 @@ body {
   max-width: 800px;
 }
 
-
-
+/* Headings */
 h1 {
   text-align: center;
   margin-bottom: 10px;
+}
+
+header.card h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header.card p {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Subheading in dark mode */
+.dark-mode header.card p {
+  color: white;
 }
 
 h2 {
@@ -41,6 +59,7 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Paragraphs and lists */
 p {
   margin-bottom: 10px;
 }
@@ -55,6 +74,7 @@ ul ul {
   list-style-type: circle;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: #0077cc;
@@ -64,6 +84,7 @@ a:hover {
   color: #005fa3;
 }
 
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -81,8 +102,7 @@ th {
   color: white;
 }
 
-
-
+/* Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -98,7 +118,7 @@ textarea {
   box-sizing: border-box;
 }
 
-
+/* Buttons */
 button {
   padding: 10px 20px;
   background-color: #0077cc;
@@ -112,7 +132,25 @@ button:hover {
   background-color: #005fa3;
 }
 
+.toggle-button {
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .toggle-button {
+  background-color: #3399ff;
+}
+
+/* Images */
 img {
   max-width: 150px;
   height: auto;
@@ -121,16 +159,12 @@ img {
   border-radius: 0;
 }
 
-
+/* Layout */
 header, main, footer {
   margin-bottom: 30px;
 }
 
-header h1 {
-  font-size: 2em;
-  margin-bottom: 5px;
-}
-
+/* Dark Mode */
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -153,7 +187,7 @@ header h1 {
   color: #82cfff;
 }
 
-
+/* Hidden class (if needed) */
 .hidden {
   display: none;
 }

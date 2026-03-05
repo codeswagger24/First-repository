@@ -1,43 +1,45 @@
 import { useState } from "react";
 
-function Skills() {
+function Skills({ skills }) {
   const [showSkills, setShowSkills] = useState(true);
 
+  const renderSkills = (skillsList) => (
+    <ul>
+      {skillsList.map((skill, index) => {
+        if (typeof skill === "string") {
+          return <li key={index}>{skill}</li>;
+        }
+        if (skill.title) {
+          return (
+            <li key={index}>
+              {skill.title}
+              {skill.subSkills && skill.subSkills.length > 0 && renderSkills(skill.subSkills)}
+            </li>
+          );
+        }
+        return null;
+      })}
+    </ul>
+  );
+
   return (
-    <section className="card">
-      <button onClick={() => setShowSkills(!showSkills)}>
-        Show/Hide Skills
+    <div style={{ marginBottom: "20px" }}>
+      {/* Button sits outside the card */}
+      <button
+        onClick={() => setShowSkills(!showSkills)}
+        className="toggle-button"
+        style={{ marginBottom: "10px" }} // spacing between button and card
+      >
+        {showSkills ? "Hide Skills" : "Show Skills"}
       </button>
 
       {showSkills && (
         <section className="card">
           <h2>Skills</h2>
-
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-
-          <ul>
-            <li>
-              Web Development
-              <ul>
-                <li>
-                  Frontend
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                  </ul>
-                </li>
-                <li>Backend</li>
-              </ul>
-            </li>
-          </ul>
+          {renderSkills(skills)}
         </section>
       )}
-    </section>
+    </div>
   );
 }
 
