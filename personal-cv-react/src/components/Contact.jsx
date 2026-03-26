@@ -7,7 +7,28 @@ function Contact() {
   // ← Insert the handleSubmit function here
   function handleSubmit(e) {
     e.preventDefault();
-    alert(`Thank you ${name}!`);
+
+    fetch("http://localhost/cv-api/process.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name: name })
+    })
+    .then(res => res.json())
+    .then(data => {
+      // --- TASK 6 START ---
+      if (data.message) {
+        alert(data.message); // This shows "Hello [Name]" OR "Name is required"
+      } else {
+        alert("Unexpected error occurred."); // This is the fallback for weird errors
+      }
+      // --- TASK 6 END ---
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Could not connect to the server. Make sure XAMPP is running!");
+    });
   }
 
   return (
